@@ -4,8 +4,8 @@ import { mascotasContext } from '../../mascotasContext';
 function MascotaCard({ mascota }) {
     const { onCambiarEstado, onEliminar } = React.useContext(mascotasContext)
     return (
-        <div key={mascota.id} className='card mascota-card p-4 m-2 '>
-            <p className='card-tittle p-2'> Nombre de la mascota: {mascota.nombre}</p>
+        <div key={mascota.id} className={`card mascota-card p-4 m-2 ${mascota.estado == 'Disponible' ? 'disponible' : mascota.estado == "Adoptado" && 'adoptado'}`}>
+            <p className='card-tittle p-2 '> Nombre de la mascota: {mascota.nombre}</p>
             <div className='card-body info-card d-flex gap-2 flex-column'>
                 <p className='card-text'>Tipo de mascota: {mascota.tipo}</p>
                 <p className='card-text'>Edad de la mascota: {mascota.edad} años</p>

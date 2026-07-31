@@ -1,9 +1,9 @@
 body {
     padding: 4rem;
-    background-color: #efefef;
+    background: #009fde;
+    background: radial-gradient(circle, rgba(0, 159, 222, 1) 0%, rgba(87, 199, 133, 1) 71%, rgba(237, 221, 83, 1) 100%);
     font-size: 20px;
     margin: 0;
-    padding: 0;
 }
 
 .card {
@@ -18,7 +18,7 @@ body {
 
 .tittle {
     text-decoration: solid;
-    color: rgb(31, 92, 89)
+    color: rgb(195, 254, 251)
 }
 
 .estadisticas {
@@ -42,10 +42,6 @@ body {
     border-radius: 10px;
 }
 
-option {
-    color: white;
-    background-color: rgb(80, 80, 173);
-}
 
 .text-end {
     font-weight: bold;
@@ -72,4 +68,8 @@ option {
     align-items: center;
     background-color: rgb(248, 247, 169);
     border-radius: 10px;
+}
+
+.adoptado {
+    background-color: #f38601;
 }

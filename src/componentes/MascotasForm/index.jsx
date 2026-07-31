@@ -73,12 +73,12 @@ function MascotasForm() {
     return (
         <div className=' d-flex flex-column gap-2 mb-2 card p-3 bg-secondary text-light'>
             {error && <h3 className='error bg-danger p-3'>{message}</h3>}
-            <form className='form d-flex flex-column gap-2' onSubmit={onSubmit}>
+            <form className='form d-flex flex-column gap-2' autoComplete='off' onSubmit={onSubmit}>
                 <label htmlFor="mascotaNombre">Ingrese el nombre de la Mascota</label>
                 <input value={inputNombre} onChange={(event) => onChange(event, 'nombre')} className='form-control' type="text" name='mascotaNombre' />
                 <label htmlFor="mascotaEdad">Ingrese la edad de la Mascota</label>
                 <input value={inputEdad} onChange={(event) => onChange(event, 'edad')} className='form-control' type="number" name='mascotaEdad' />
-                <select value={tipoMascota} onChange={(event) => onChange(event, 'tipo')} className='form-select mb-3 mt-3' name="tiposMascotas" id="tiposMascota">
+                <select value={tipoMascota} onChange={(event) => onChange(event, 'tipo')} className='form-control mb-3 mt-3' name="tiposMascotas" id="tiposMascota">
                     <option value='nada'>Seleccione el tipo de mascota que va a agregar</option>
                     <option value="Perro">Perro</option>
                     <option value='Gato'>Gato</option>
